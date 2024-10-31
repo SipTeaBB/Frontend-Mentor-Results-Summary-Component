@@ -1,0 +1,184 @@
+
+
+
+
+/* xs */
+@media (min-width: 475px) {} 
+
+/* sm */
+@media (min-width: 640px) {}
+
+/* md */
+@media (min-width: 768px) {} 
+
+/* lg */
+@media (min-width: 1024px) {} 
+
+/* xl */
+ @media (min-width: 1280px) {} 
+
+/* 2xl */
+ @media (min-width: 1536px) {} 
+
+
+/* 
+TODO parse through the current @media queries!
+*/
+
+/*The desktop-first pre-defined media queries:*/
+/* 2xl */
+@media (max-width: 1536px) {}
+
+/* xl */
+@media (max-width: 1280px) {}
+
+/* lg */
+@media (max-width: 1024px) {}
+
+/* md */
+@media (max-width: 768px) {}
+
+/* sm */
+@media (max-width: 640px) {}
+
+/* xs */
+@media (max-width: 475px) {}
+
+/* Mobile container utility class: */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+/* END of @media queries */
+
+
+
+
+@font-face {
+        font-display: swap; 
+        font-family: 'HankenGrotesk';
+        font-style: normal;
+        font-weight: 400;
+        src: url('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+}
+
+*{
+    font-family: 'HankenGrotesk';
+    border: 1px solid red;
+}
+
+:root {
+    --blue-box-color: hsl(248, 100%, 64%);
+    --dark-blue-color: hsl(237, 100%, 13%);
+    --off-white: white;
+}
+
+.blue-box {
+  display: flex-box;
+  height: 25.5em;
+  width: 20em;
+  border-radius: 16px;
+  background-color: var(--blue-box-color);
+}
+
+.your-result {
+  padding-top: 2em;
+  color: var(--off-white);
+  text-align: center;
+}
+
+.circle-for-76 {
+    display: flex;
+   
+    color: white;
+    background: 
+    linear-gradient(
+        rgba(0, 3, 66, .3),
+        var(--blue-box-color)
+    );
+    height: 10.5em;
+    width:  10.5em;
+    border-radius: 50%;
+  
+  
+    
+    
+    margin-top: 2em;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    
+   
+    
+}
+
+.seventy-six {
+  font: 5em 'HankenGrotesk';
+}
+
+.of-one-hundred {
+  font: .8em 'HankenGrotesk';
+}
+.seventy-six, .of-one-hundred {
+  position: relative;
+  text-align: center;
+  
+} 
+
+
+
+.continue-btn {
+    background: var(--dark-blue-color);
+    color: var(--off-white);
+    border-radius: 16px;
+    padding: 10px 5em;
+    cursor: pointer;
+}
