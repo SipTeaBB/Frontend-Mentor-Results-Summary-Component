@@ -1,105 +1,5 @@
 
 
-
-
-/* xs */
-@media (min-width: 475px) {} 
-
-/* sm */
-@media (min-width: 640px) {}
-
-/* md */
-@media (min-width: 768px) {} 
-
-/* lg */
-@media (min-width: 1024px) {} 
-
-/* xl */
- @media (min-width: 1280px) {} 
-
-/* 2xl */
- @media (min-width: 1536px) {} 
-
-
-/* 
-TODO parse through the current @media queries!
-*/
-
-/*The desktop-first pre-defined media queries:*/
-/* 2xl */
-@media (max-width: 1536px) {}
-
-/* xl */
-@media (max-width: 1280px) {}
-
-/* lg */
-@media (max-width: 1024px) {}
-
-/* md */
-@media (max-width: 768px) {}
-
-/* sm */
-@media (max-width: 640px) {}
-
-/* xs */
-@media (max-width: 475px) {}
-
-/* Mobile container utility class: */
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-/* xs */
-@media (min-width: 475px) {
-  .container {
-    max-width: 475px;
-  }
-}
-
-/* sm */
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-/* md */
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-/* lg */
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-/* xl */
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-/* 2xl */
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-/* END of @media queries */
-
-
-
-
 @font-face {
         font-display: swap; 
         font-family: 'HankenGrotesk';
@@ -117,24 +17,114 @@ TODO parse through the current @media queries!
     --blue-box-color: hsl(248, 100%, 64%);
     --dark-blue-color: hsl(237, 100%, 13%);
     --off-white: white;
+    --your-result-and-100: #dadde0;
 }
 
-.blue-box {
-  display: flex-box;
+
+section.right-side {
+  display: grid;
+  position: relative;
+  background: white;
+  box-shadow: 1px 1px;
   height: 25.5em;
-  width: 20em;
+  width: 36em;
+
+
+  margin-left: 5em;
+  float: right;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+
+
+
+span.reaction-div, 
+span.memory-div,
+span.verbal-div,
+span.visual-div {
+ top: 2px;
+}
+
+.reaction-div {
+  border-radius: 16px;
+  padding: 10px .1em;
+  background: #f7d9d7;
+  
+}
+
+.memory-div {
+  
+  border-radius: 16px;
+  padding: 10px .1em;
+  background: #f4f7d7;
+  display: block;
+
+}
+
+.verbal-div {
+  border-radius: 16px;
+  padding: 10px .1em;
+  background: #dbf7d7;
+}
+
+.visual-div {
+  border-radius: 16px;
+  padding: 10px .1em;
+  background: #d7e9f7;
+}
+
+.right-side {
+  margin-left: 14em;
+  height: 25.5em;
+}
+
+.span-text {
+  text-align: center;
+}
+
+.span-num {
+  margin-left: 20px;
+}
+
+.left-side {
+  position: static;
+  display: flex-box; 
+
+  height: 25.5em;
+  width: 18em;
   border-radius: 16px;
   background-color: var(--blue-box-color);
+  margin: 0 auto;
+}
+
+.great {
+  color: var(--off-white);
+  position: inherit;
+  margin-top: .6em;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.you-scored {
+  color: var(--off-white);
+  position: inherit;
+  margin-top: -1em;
+  margin-left: 2em;
+  margin-right: 2em;
+ 
+
+  text-align: center;
+  font-size: .7em;
 }
 
 .your-result {
   padding-top: 2em;
-  color: var(--off-white);
+  color: var(--your-result-and-100);
   text-align: center;
 }
 
 .circle-for-76 {
-    display: flex;
+   
    
     color: white;
     background: 
@@ -145,35 +135,43 @@ TODO parse through the current @media queries!
     height: 10.5em;
     width:  10.5em;
     border-radius: 50%;
-  
-  
-    
-    
+    top: 0;
     margin-top: 2em;
     margin-bottom: auto;
     margin-left: auto;
-    margin-right: auto;
-    
-    
-    
-   
-    
+    margin-right: auto;   
 }
 
-.seventy-six {
+/* '76' font sould have same line weight as 'Great' font */
+p.seventy-six {
   font: 5em 'HankenGrotesk';
+  margin: auto;
+  margin-top: .3em;
+  text-align: center;
 }
 
-.of-one-hundred {
+p.of-one-hundred {
   font: .8em 'HankenGrotesk';
-}
-.seventy-six, .of-one-hundred {
+  margin-top: -6.2em;
   position: relative;
+  top: 50px;
+  color: var(--your-result-and-100);
+}
+p.seventy-six, p.of-one-hundred {
   text-align: center;
-  
 } 
 
+/*  left box */
 
+section.left-side {
+  display: grid;
+  background: white;
+  box-shadow: 1px 1px;
+  margin-top: -5em;
+  margin-left: 5em;
+  float:left;
+  z-index: 1;
+}
 
 .continue-btn {
     background: var(--dark-blue-color);
@@ -181,4 +179,34 @@ TODO parse through the current @media queries!
     border-radius: 16px;
     padding: 10px 5em;
     cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  body {
+    align-items: flex-start;
+    background-color: var(--white);
+  }
+
+  .card {
+    box-shadow: none;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .left-side {
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .left-side .info {
+    width: 270px;
+  }
+
+  .right-side {
+    width: 100%;
+  }
 }
